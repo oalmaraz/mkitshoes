@@ -25,7 +25,7 @@ implementation
 
 procedure TForm6.Button1Click(Sender: TObject);
 begin
-  ShowMessage('hello');
+  ShowMessage('hello mundo 2');
 end;
 
 end.

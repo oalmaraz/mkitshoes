@@ -1,0 +1,221 @@
+object frmPolizasEDetalle: TfrmPolizasEDetalle
+  Left = 604
+  Top = 266
+  Caption = 'Detalle Poliza de Egresos'
+  ClientHeight = 436
+  ClientWidth = 625
+  Color = clWhite
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 8
+    Top = 367
+    Width = 67
+    Height = 22
+    Caption = 'Cheque'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    Transparent = True
+  end
+  object laCheque: TLabel
+    Left = 84
+    Top = 367
+    Width = 77
+    Height = 22
+    Caption = 'X, $ 0.00'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlue
+    Font.Height = -19
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    Transparent = True
+  end
+  object dgPartidas: TDBGrid
+    Left = 8
+    Top = 8
+    Width = 617
+    Height = 353
+    BorderStyle = bsNone
+    DataSource = dsPolizas
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+  end
+  object paBotones: TPanel
+    Left = 0
+    Top = 398
+    Width = 625
+    Height = 38
+    Align = alBottom
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    TabOrder = 1
+    ExplicitTop = 403
+    ExplicitWidth = 633
+    object buAgregar: TBitBtn
+      Left = 408
+      Top = 7
+      Width = 97
+      Height = 25
+      Caption = 'Agregar Partida'
+      TabOrder = 0
+      OnClick = buAgregarClick
+    end
+    object buImprimir: TBitBtn
+      Left = 304
+      Top = 7
+      Width = 97
+      Height = 25
+      Caption = 'Imprimir'
+      Glyph.Data = {
+        CA050000424DCA05000000000000360000002800000016000000150000000100
+        18000000000094050000130B0000130B00000000000000000000000080000080
+        0000800000800000800000800000800000800000800000800000800000800000
+        8000008000008000008000008000008000008000008000008000008000000000
+        80000080494B4A7B7E7D7B7E7D7B7E7D7B7E7D7B7E7D7B7E7D7B7E7D7B7E7D7B
+        7E7D7B7E7D7B7E7D7B7E7D7B7E7D7B7E7D7B7E7D7B7E7D494A49000080000080
+        00000000800000807B7E7DB5B7B7BCBCBCBDBDBDBFBFBFBFBFBFBFBFBFBFBFBF
+        BBBCBCBCBCBCBCBCBCBBBCBCB8BABAB8BABAB8BABAB4B5B5ABABAB7B7E7D0000
+        800000800000000080494B4A7B7E7DC5C5C57B7E7D7B7E7D7B7E7D7B7E7D7B7E
+        7D7B7E7D7B7E7D7B7E7D7B7E7D7B7E7D7B7E7D7B7E7D7B7E7D7B7E7D9F9F9F88
+        8B8A52545400008000000000807B7E7DC0C0C0B8BAB9B5B7B8B1B3B3A9ABABA9
+        AAABA7A8A8A7A8A8A4A5A6A7A7A7A6A6A6A3A4A5A1A3A3A0A2A29FA1A19D9F9F
+        9E9E9EADADAD7B7E7D00008000000000807B7E7DC4C4C4B9BABAAAABAC9A9C9C
+        9A9C9E9B9C9D9B9C9D9A9B9C959797888A8B7F80818083838184848385858385
+        858587878A8D8EB4B4B47B7E7D00008000000000807B7E7DD4D4D49494947475
+        766E71716C6E6E6B6D6D6C6E6E6C6D6E6B6D6D6B6D6D696C6C696C6C696B6C68
+        696B6E71716C6E6E757777B4B4B47B7E7D00008000000000807B7E7DD3D3D395
+        9595F2F3F3BFBFBFDFE0E0F8F9F9F9F9F9FBFBFBFAFAFAFBFBFBFBFBFBF7F7F8
+        F7F7F8F7F7F8F5F6F7F0F0F1777A7AB8B8B87B7E7D00008000000000807B7E7D
+        EEEFF0B0B0B0E6E7E7FBFBFBC3C3C3EDEDEDECECECEEEEEEEEEEEEEBEBEBE8E9
+        E9E8E9E9E7E7E8E8E9E9E8E9E9E8E9E9888B8BBCBEBE7B7E7D00008000000000
+        807B7E7DFFFFFFFFFFFFF7F7F7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE9E9E9E9E9E9D3D3D37B7E7D000080
+        00000000800000807B7E7DFFFFFFEEF0F1AEB0AF6C6E6E696C6C696C6C696C6C
+        696C6C696C6C696C6C696C6C696C6C838687A8ABACE3E4E4C9CBCB7B7E7D0000
+        8000008000000000800000800000807B7E7DFFFFFFAEB0AFF2F2F2E5E5E5E5E5
+        E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5E5F2F2F2AEB0AFA0A3A37B7E7D00
+        008000008000008000000000800000800000800000807B7E7DAEB0AFFFFFFFE5
+        E5E5E7E7E7E8E8E8C6C7C7C7C8C8EDEDEDEEEEEEF0F0F0FFFFFFAEB0AF7B7E7D
+        0000800000800000800000800000000080000080000080000080000080AEB0AF
+        FFFFFFE4E4E4CDCDCDCECECE979999A4A5A5EBEBEBECECECEEEEEEFFFFFFAEB0
+        AF00008000008000008000008000008000000000800000800000800000800000
+        80AEB0AFFFFFFFE2E2E2E4E4E4E5E5E5929494929494E9E9E9EBEBEBECECECFF
+        FFFFAEB0AF000080000080000080000080000080000000008000008000008000
+        0080000080AEB0AFFFFFFFE1E1E1898B8B898B8B898B8B898B8B8A8C8C8A8C8C
+        EBEBEBFFFFFFAEB0AF0000800000800000800000800000800000000080000080
+        000080000080000080AEB0AFFFFFFFE1E1E1E1E1E19092929193939193939294
+        94E8E8E8EAEAEAFFFFFFAEB0AF00008000008000008000008000008000000000
+        80000080000080000080000080AEB0AFFFFFFFE1E1E1CBCBCBCBCBCB888A8A89
+        8B8BCDCDCDCECECEE8E8E8FFFFFFAEB0AF000080000080000080000080000080
+        0000000080000080000080000080000080AEB0AFFFFFFFFDFDFDFDFDFDFDFDFD
+        FDFDFDFDFDFDFDFDFDFDFDFDFDFDFDFFFFFFAEB0AF0000800000800000800000
+        800000800000000080000080000080000080000080757776AEB0AFAEB0AFAEB0
+        AFAEB0AFAEB0AFAEB0AFAEB0AFAEB0AFAEB0AFAEB0AF75777600008000008000
+        0080000080000080000000008000008000008000008000008000008000008000
+        0080000080000080000080000080000080000080000080000080000080000080
+        0000800000800000800000800000}
+      TabOrder = 1
+      OnClick = buImprimirClick
+    end
+    object buPrepoliza: TBitBtn
+      Left = 511
+      Top = 7
+      Width = 97
+      Height = 25
+      Caption = 'Agregar Pre-Poliza'
+      TabOrder = 2
+      OnClick = buPrepolizaClick
+    end
+  end
+  object qyPolizas: TIBQuery
+    Database = dmIBModulo.ibSistema
+    Transaction = dmIBModulo.ibSistemaTransaccion
+    BufferChunks = 1000
+    CachedUpdates = False
+    ParamCheck = True
+    SQL.Strings = (
+      'SELECT *'
+      'FROM TL_POLIZA_E_DET(:P_CHEQUE)')
+    Left = 176
+    Top = 176
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'P_CHEQUE'
+        ParamType = ptUnknown
+        Value = '0'
+      end>
+    object qyPolizasR_ID: TIntegerField
+      FieldName = 'R_ID'
+      Origin = 'TL_POLIZA_E_DET.R_ID'
+    end
+    object qyPolizasR_CHEQUE: TIntegerField
+      FieldName = 'R_CHEQUE'
+      Origin = 'TL_POLIZA_E_DET.R_CHEQUE'
+    end
+    object qyPolizasR_CUENTA: TIntegerField
+      FieldName = 'R_CUENTA'
+      Origin = 'TL_POLIZA_E_DET.R_CUENTA'
+    end
+    object qyPolizasR_CUENTA_C: TIBStringField
+      FieldName = 'R_CUENTA_C'
+      Origin = 'TL_POLIZA_E_DET.R_CUENTA_C'
+    end
+    object qyPolizasR_CUENTA_N: TIBStringField
+      FieldName = 'R_CUENTA_N'
+      Origin = 'TL_POLIZA_E_DET.R_CUENTA_N'
+      Size = 100
+    end
+    object qyPolizasR_ORDEN: TIntegerField
+      FieldName = 'R_ORDEN'
+      Origin = 'TL_POLIZA_E_DET.R_ORDEN'
+    end
+    object qyPolizasR_CARGO: TFloatField
+      FieldName = 'R_CARGO'
+      Origin = 'TL_POLIZA_E_DET.R_CARGO'
+    end
+    object qyPolizasR_ABONO: TFloatField
+      FieldName = 'R_ABONO'
+      Origin = 'TL_POLIZA_E_DET.R_ABONO'
+    end
+  end
+  object dsPolizas: TDataSource
+    DataSet = qyPolizas
+    Left = 208
+    Top = 176
+  end
+  object spE_POLIZAS_E_DET: TIBStoredProc
+    Database = dmIBModulo.ibSistema
+    Transaction = dmIBModulo.ibSistemaTransaccion
+    StoredProcName = 'E_POLIZAS_E_DET'
+    Left = 248
+    Top = 176
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'R_ID'
+        ParamType = ptOutput
+      end
+      item
+        DataType = ftInteger
+        Name = 'P_ID'
+        ParamType = ptInput
+      end>
+  end
+end

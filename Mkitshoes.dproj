@@ -71,6 +71,8 @@
         <DCC_RemoteDebug>true</DCC_RemoteDebug>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
@@ -83,9 +85,1353 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="unit1.pas">
-            <Form>Form6</Form>
+        <DCCReference Include="IBData.pas">
+            <Form>dmIBData</Form>
             <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="menu.pas">
+            <Form>frmMenu</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="clases.pas"/>
+        <DCCReference Include="autorizacion_cliente.pas">
+            <Form>frmAplicacionCliente</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="padre.pas">
+            <Form>frmPadre</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="hijo.pas">
+            <Form>frmHijo</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="capturar.pas">
+            <Form>frmCapturar</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="explorar.pas">
+            <Form>frmExplorar</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="explorarMDI.pas">
+            <Form>frmExplorarMDI</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="capturar_configuracion_menu.pas"/>
+        <DCCReference Include="reglas_de_negocios.pas"/>
+        <DCCReference Include="USQLAnaliza.pas"/>
+        <DCCReference Include="UAWR.pas"/>
+        <DCCReference Include="UfrmScript.pas">
+            <Form>frmScript</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mConfig\capturar_formas_estatus.pas">
+            <Form>frmCapturar_Formas_Estatus</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mConfig\capturar_botones.pas">
+            <Form>frmCapturar_botones</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mConfig\capturar_iconos_menu.pas">
+            <Form>frmCapturar_iconos_menu</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mConfig\capturar_tipos_de_formas.pas">
+            <Form>frmCapturar_tipos_de_formas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mConfig\explorar_tipos_de_formas.pas">
+            <Form>frmExplorar_tipos_de_formas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="UfrmBuild.pas">
+            <Form>frmBuild</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="UfrmConstructor.pas">
+            <Form>frmConstructor</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mConfig\capturar_relacion_botones.pas">
+            <Form>frmCapturar_relacion_botones</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mConfig\explorar_relacion_botones.pas">
+            <Form>frmExplorar_relacion_botones</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mConfig\UfrmFormasEstatus.pas">
+            <Form>frmFormasEstatus</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mConfig\UfrmDiccionario.pas">
+            <Form>frmDiccionario</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mConfig\mantenimientoDiccionario.pas">
+            <Form>frmMantenimientoDiccionario</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mConfig\explorar_botones.pas">
+            <Form>frmExplorar_botones</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_activar_botones.pas">
+            <Form>frmCapturar_activar_botones</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_almacenes.pas">
+            <Form>frmCapturar_almacenes</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_bancos.pas"/>
+        <DCCReference Include="mcatalogos\capturar_base_sujetos.pas">
+            <Form>frmCapturar_base_sujetos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_cajas.pas">
+            <Form>frmCapturar_cajas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_calidades.pas">
+            <Form>frmCapturar_calidades</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_clasificaciones.pas">
+            <Form>frmCapturar_clasificaciones</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_clientes.pas">
+            <Form>frmCapturar_clientes</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_colores.pas">
+            <Form>frmCapturar_colores</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_compradores.pas">
+            <Form>frmCapturar_compradores</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_conceptos_descuentos.pas">
+            <Form>frmCapturar_conceptos_descuentos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_conceptos_gastos.pas">
+            <Form>frmCapturar_Conceptos_Gastos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_condiciones_comerciales.pas">
+            <Form>frmCapturar_condiciones_comerciales</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_empresa.pas">
+            <Form>frmCapturar_empresa</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_entidad_geografica.pas">
+            <Form>frmCapturar_entidad_geografica</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_financiamientos.pas">
+            <Form>frmCapturar_financiamientos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_grupos_colores.pas">
+            <Form>frmCapturar_grupos_colores</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_grupos_materiales.pas">
+            <Form>frmCapturar_grupos_materiales</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_grupos_tabulador.pas">
+            <Form>frmCapturar_grupos_tabulador</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_lista_precios.pas">
+            <Form>frmCapturar_lista_precios</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_materiales.pas">
+            <Form>frmCapturar_materiales</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_mensajes.pas">
+            <Form>frmCapturar_mensajes</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_mis_listas_de_precios.pas">
+            <Form>frmCapturar_mis_listas_de_precios</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_monedas.pas">
+            <Form>frmCapturar_monedas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_nom.pas">
+            <Form>frmcapturar_nom</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_nombre_lista_precios.pas">
+            <Form>frmCapturar_nombre_lista_precios</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_preconfiguracion_touchscreen.pas">
+            <Form>frmCapturar_preconfiguracion_touchScreen</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_presentaciones.pas">
+            <Form>frmCapturar_presentaciones</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_promociones.pas">
+            <Form>frmCapturar_promociones</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_proveedores.pas">
+            <Form>frmCapturar_proveedores</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_remitentes.pas">
+            <Form>frmCapturar_remitentes</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_rutas.pas">
+            <Form>frmCapturar_rutas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_seguridad.pas">
+            <Form>frmCapturar_seguridad</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_tabuladores.pas">
+            <Form>frmCapturar_tabuladores</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_tentrega.pas">
+            <Form>frmCapturar_tentrega</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_tipo_de_ctas.pas">
+            <Form>frmCapturar_tipo_de_ctas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_transportistas.pas">
+            <Form>frmCapturar_transportistas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_unidades.pas">
+            <Form>frmCapturar_unidades</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_usuarios.pas">
+            <Form>frmCapturar_usuarios</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_vendedores.pas">
+            <Form>frmCapturar_vendedores</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_zonas.pas">
+            <Form>frmCapturar_zonas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mConfig\UfrmEstatusDestinatarios.pas">
+            <Form>frmEstatusDestinatarios</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mConfig\UfrmSeleccionarUsuario.pas">
+            <Form>frmSeleccionarUsuario</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_monedas.pas">
+            <Form>frmExplorar_monedas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_tipo_de_ctas.pas">
+            <Form>frmExplorar_tipo_de_ctas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_condiciones_comerciales.pas">
+            <Form>frmExplorar_condiciones_comerciales</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_bancos.pas">
+            <Form>frmExplorar_bancos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_clasificaciones.pas">
+            <Form>frmExplorar_clasificaciones</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_tabuladores.pas">
+            <Form>frmExplorar_tabuladores</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_tabulador_nlp.pas">
+            <Form>frmExplorar_tabulador_nlp</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_grupos_tabulador.pas">
+            <Form>frmExplorar_grupos_tabulador</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_compradores.pas">
+            <Form>frmExplorar_compradores</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_proveedores.pas">
+            <Form>frmExplorar_proveedores</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_clientes.pas">
+            <Form>frmExplorar_clientes</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_extensiones.pas">
+            <Form>frmExplorar_extensiones</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_transportistas.pas">
+            <Form>frmExplorar_transportistas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_vendedores.pas">
+            <Form>frmExplorar_vendedores</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_remitentes.pas">
+            <Form>frmExplorar_remitentes</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\capturar_departamentos.pas">
+            <Form>frmCapturar_departamentos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_financiamientos.pas">
+            <Form>frmExplorar_financiamientos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_promociones.pas">
+            <Form>frmExplorar_promociones</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_almacenes.pas">
+            <Form>frmExplorar_almacenes</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_unidades.pas">
+            <Form>frmExplorar_unidades</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_materiales2.pas"/>
+        <DCCReference Include="mcatalogos\explorar_materiales3.pas"/>
+        <DCCReference Include="mcatalogos\explorar_materiales.pas">
+            <Form>frmExplorar_materiales</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_cajas.pas">
+            <Form>frmExplorar_cajas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_calidades.pas">
+            <Form>frmExplorar_Calidades</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_grupos_materiales.pas">
+            <Form>frmExplorar_Grupos_Materiales</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_preconfiguracion_touchScreen.pas">
+            <Form>frmExplorar_preconfiguracion_touchScreen</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_lista_precios.pas">
+            <Form>frmExplorar_lista_precios</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_nombre_lista_precios.pas">
+            <Form>frmExplorar_nombre_lista_precios</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_rutas.pas">
+            <Form>frmExplorar_rutas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_conceptos_descuentos_nc.pas">
+            <Form>frmExplorar_Conceptos_Descuentos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_conceptos_gastos.pas">
+            <Form>frmExplorar_Conceptos_Gastos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_presentaciones.pas">
+            <Form>frmExplorar_presentaciones</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_zonas.pas">
+            <Form>frmExplorar_zonas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_tentrega.pas">
+            <Form>frmExplorar_tentrega</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_mensajes.pas">
+            <Form>frmExplorar_mensajes</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mEntradas\capturar_ordenes_de_compras.pas">
+            <Form>frmCapturar_Ordenes_de_Compras</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mEntradas\explorar_ordenes_de_compras.pas">
+            <Form>frmExplorar_ordenes_de_compras</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mEntradas\capturarMDIEstatus.pas">
+            <Form>frmCapturarMDIEstatus</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="capturarMDI.pas">
+            <Form>frmCapturarMDI</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mEntradas\capturar_desempaques.pas"/>
+        <DCCReference Include="mEntradas\explorar_desempaques.pas">
+            <Form>frmExplorar_desempaques</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mEntradas\capturar_procesos.pas">
+            <Form>frmCapturar_procesos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mEntradas\explorar_notas_de_entrada.pas">
+            <Form>frmExplorar_notas_de_entrada</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="capturar_entradas.pas">
+            <Form>frmCapturar_Entradas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mSalidas\capturar_pedidos.pas">
+            <Form>frmCapturar_pedidos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mSalidas\explorar_pedidos.pas">
+            <Form>frmExplorar_pedidos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmCuentasPorPagar.pas">
+            <Form>frmCuentasPorPagar</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UTypeCuentasPorPagar.pas"/>
+        <DCCReference Include="mFinanzas\UfrmEstadoDeCuentas.pas">
+            <Form>frmEstadoDeCuentas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmCuentasPorCobrar.pas">
+            <Form>frmCuentasPorCobrar</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\capturar_colectas_pagos.pas">
+            <Form>frmCapturar_colectas_pagos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\explorar_notas_de_credito.pas">
+            <Form>frmExplorar_notas_de_credito</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmSeguimiento_Cobranza.pas">
+            <Form>frmSeguimiento_Cobranza</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\capturar_seguimiento_cobranza.pas">
+            <Form>frmCapturar_SeguimientoCobranza</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\capturar_colectas.pas">
+            <Form>frmCapturar_colectas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\explorar_colectas.pas">
+            <Form>frmExplorar_colectas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmSeguimiento_Pagos.pas">
+            <Form>frmSeguimiento_Pagos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmProyeccion_Cobranza.pas">
+            <Form>frmProyeccion_Cobranza</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmProyeccion_Pagos.pas">
+            <Form>frmProyeccion_Pagos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\capturar_notas_de_cargos.pas">
+            <Form>frmCapturar_notas_de_cargo</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\explorar_notas_de_cargo.pas">
+            <Form>frmExplorar_notas_de_cargo</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\capturar_chequeras.pas">
+            <Form>frmCapturar_chequeras</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmChequesGirados.pas">
+            <Form>frmChequesGirados</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\capturar_anticipos.pas">
+            <Form>frmCapturar_anticipos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\capturar_anticipos_proveedores.pas">
+            <Form>frmCapturar_anticipos_proveedores</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\capturar_cheques.pas">
+            <Form>frmCapturar_cheques</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\capturar_movimientos.pas">
+            <Form>frmCapturar_movimientos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\capturar_movimientos_clasificados.pas">
+            <Form>frmCapturar_Movimientos_Clasificados</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\explorar_anticipos_proveedores.pas">
+            <Form>frmExplorar_anticipos_proveedores</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mUtilerias\capturar_preferencias.pas">
+            <Form>frmCapturar_preferencias</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mUtilerias\scripts.pas">
+            <Form>frmScripts</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mUtilerias\UfrmReporteGralesSalidas.pas">
+            <Form>frmReporteGralesSalidas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mUtilerias\UfrmReporteGralesEntradas.pas">
+            <Form>frmReporteGralesEntradas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="explorar_usuarios.pas">
+            <Form>frmExplorar_Usuarios</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_departamentos.pas">
+            <Form>frmExplorar_departamentos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UdmHorizontal.pas">
+            <Form>dmHorizontal</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UdmAltaRapidaMateriales.pas">
+            <Form>dmAltaRapidaMateriales</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UdmLineas.pas">
+            <Form>dmLineas</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\lineas.pas">
+            <Form>frmLineas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\seleccionar.pas">
+            <Form>frmSeleccionar</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\seleccionar_almacen.pas">
+            <Form>frmSeleccionar_Almacen</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\seleccionar_bancos.pas">
+            <Form>frmSeleccionar_bancos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\seleccionar_bancos_proveedores.pas">
+            <Form>frmSeleccionar_Bancos_Proveedores</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\seleccionar_extensiones.pas">
+            <Form>frmSeleccionar_Extensiones</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\seleccionar_material_grupos.pas">
+            <Form>frmSeleccionar_material_grupos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\seleccionar_unidades.pas">
+            <Form>frmSeleccionar_Unidades</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\seleccionar_zona_comprador.pas">
+            <Form>frmSeleccionar_zona_comprador</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\seleccionar_zonas.pas">
+            <Form>frmSeleccionar_zonas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmAltaRapidaMateriales.pas">
+            <Form>frmAltaRapidaMateriales</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmAutorizar.pas">
+            <Form>frmAutorizar</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmCFD.pas">
+            <Form>frmCFD</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmCostosPI.pas">
+            <Form>frmCostosPI</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmFrameMaterial.pas">
+            <Form>MarcoMateriales</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmHorizontal.pas">
+            <Form>frmHorizontal</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmImagen.pas">
+            <Form>frmImagen</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmInvSeries.pas">
+            <Form>frmInvSeries</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmLineas.pas">
+            <Form>frmCapturar_Lineas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmMaterial_Costos.pas">
+            <Form>frmMaterial_Costos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmMaterialExistencias.pas">
+            <Form>frmMaterialExistencias</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmMedidas.pas">
+            <Form>frmMedidas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmMedidasGrupos.pas">
+            <Form>frmMedidasGrupos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmMMP.pas">
+            <Form>frmMMP</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmSeleccionarCGastos.pas">
+            <Form>frmSeleccionarCGastos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmSeleccionarMaterial.pas">
+            <Form>frmSeleccionarMaterial</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmSeleccionarMaterialCompras.pas">
+            <Form>frmSeleccionarMaterialCompras</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmSeleccionarMaterialTodos.pas">
+            <Form>frmSeleccionarMaterialTodos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmSeleccionarRemitente.pas">
+            <Form>frmSeleccionarRemitente</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmSeleccionarTarea.pas">
+            <Form>frmSeleccionarTarea</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmSeleccionarTEntrega.pas">
+            <Form>frmSeleccionarTEntrega</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmSerie.pas">
+            <Form>frmSerie</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmTabulador.pas">
+            <Form>frmTabulador</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmValor.pas">
+            <Form>frmValor</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\Ulineas.pas">
+            <Form>frmLineasSub</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\USeleccionarConceptosGastos.pas">
+            <Form>frmSeleccionarConceptosGastos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UTypeAltaRapidaMateriales.pas"/>
+        <DCCReference Include="mcatalogos\UTypeAutorizar.pas"/>
+        <DCCReference Include="mcatalogos\UTypeHorizontal.pas"/>
+        <DCCReference Include="mcatalogos\UTypeLineas.pas"/>
+        <DCCReference Include="mcatalogos\UTypeMedidas.pas"/>
+        <DCCReference Include="mcatalogos\UdmAutorizar.pas">
+            <Form>dmAutorizar</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\generar.pas">
+            <Form>frmGenerar</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\teclado.pas">
+            <Form>frmTeclado</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\PRN_0023_Lista_Precios.pas">
+            <Form>frmPRN_0023_Lista_Precios</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\controladorImpresora.pas">
+            <Form>frmControladorImpresoras</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UdmMedidas.pas">
+            <Form>dmMedidas</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="URecords.pas"/>
+        <DCCReference Include="UTipos.pas"/>
+        <DCCReference Include="mcatalogos\explorar_colores.pas">
+            <Form>frmExplorar_Colores</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\explorar_grupos_colores.pas">
+            <Form>frmExplorar_grupos_colores</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mEntradas\cotizaciones_en_ocompras.pas">
+            <Form>frmCotizaciones_en_ocompras</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mEntradas\seleccionar_proveedor.pas">
+            <Form>frmSeleccionar_proveedor</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mEntradas\PRN_0025.pas">
+            <Form>frmPRN_0025</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mEntradas\UfrmFolio.pas">
+            <Form>frmFolio</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mEntradas\U0002_PR.pas">
+            <Form>PR_0002</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="XPMenu.pas"/>
+        <DCCReference Include="mEntradas\PRN_0032.pas">
+            <Form>frmPRN_0032</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mEntradas\UfrmSeleccionarNE.pas">
+            <Form>frmSeleccionarNE</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mEntradas\U0001_PR.pas">
+            <Form>PR_0001</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mSalidas\seleccionar_cotizaciones.pas">
+            <Form>frmSeleccionar_cotizaciones</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mSalidas\ver_cotizaciones_en_pedidos.pas">
+            <Form>frmVer_Cotizaciones_en_Pedidos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mSalidas\seleccionar_cliente.pas">
+            <Form>frmSeleccionar_cliente</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mSalidas\seleccionar_extension.pas">
+            <Form>frmSeleccionar_extension</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\seleccionar_material.pas">
+            <Form>frmSeleccionar_material</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mSalidas\PRN_0026.pas">
+            <Form>frmPRN_0026</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mSalidas\PRN_0027.pas">
+            <Form>frmPRN_0027</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mSalidas\PRN_0030.pas">
+            <Form>frmPRN_0030</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mSalidas\URPT_PEDIDO_PARTIDAS.pas">
+            <Form>RPT_PEDIDO_PARTIDAS</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mSalidas\ufrmSeleccionarPresentaciones.pas">
+            <Form>frmSeleccionarPresentaciones</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mSalidas\UfrmFTP.pas">
+            <Form>frmFTP</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mSalidas\UfrmInsuficienciasPedido.pas">
+            <Form>frmInsuficienciasPedido</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mSalidas\UfrmKit.pas">
+            <Form>frmKit</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mSalidas\UfrmSeleccionarCotizacion.pas">
+            <Form>frmSeleccionarCotizacion</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UdmCuentasPorPagar.pas">
+            <Form>dmCuentasPorPagar</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\capturar_cxp_pagos.pas">
+            <Form>frmCapturar_CXP_FormasDePago</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\capturar_cxp_movimientos.pas">
+            <Form>frmCapturar_cxp_movimientos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\PRN_0035.pas">
+            <Form>frmPRN_0035</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmDetalleDeLaCompra.pas">
+            <Form>frmDetalleDeLaCompra</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmDocumentoPagosCXP.pas">
+            <Form>frmDocumentoPagosCXP</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\PRN_CORTE_CAJAS_CXP.pas">
+            <Form>frmPRN_CORTE_CAJAS_CXP</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\PRN_0017_ESTADOS_CXP.pas">
+            <Form>frmPRN_0017</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\Uprn_0003.pas">
+            <Form>PRN_0003</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\Uprn_0004.pas">
+            <Form>PRN_0004</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UTypeDetalleDeLaCompra.pas"/>
+        <DCCReference Include="mFinanzas\UdmDetalleDeLaCompra.pas">
+            <Form>dmDetalleDeLaCompra</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UTypeDocumentoPagosCXP.pas"/>
+        <DCCReference Include="mFinanzas\UdmDocumentoPagosCXP.pas">
+            <Form>dmDocumentoPagosCXP</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UCXP_PagosD.pas">
+            <Form>frmCXP_PagosD</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\RPT_CORTE_CAJAS_CXP_DET.pas">
+            <Form>frmRPT_CORTE_CAJAS_CXP_DET</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\RPT_CORTE_CAJAS_CXP_CC_DET.pas">
+            <Form>frmRPT_CORTE_CAJAS_CXP_CC_DET</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\RPT_CORTE_CAJAS_CXP_CC.pas">
+            <Form>frmRPT_CORTE_CAJAS_CXP_CC</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\RPT_CORTE_CAJAS_CXP.pas">
+            <Form>frmRPT_CORTE_CAJAS_CXP</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmDocumentoNCreditoSAfectar.pas">
+            <Form>frmDocumentoNCreditoSAfectar</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmDocumentoNCreditoAfectada.pas">
+            <Form>frmDocumentoNCreditoAfectada</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmDocumentoNCargoSAfectar.pas">
+            <Form>frmDocumentoNCargoSAfectar</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmDocumentoNCargoAfectada.pas">
+            <Form>frmDocumentoNCargoAfectada</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UTypeDocumentoNCreditoSAfectar.pas"/>
+        <DCCReference Include="mFinanzas\UdmDocumentoNCreditoSAfectar.pas">
+            <Form>dmDocumentoNCreditoSAfectar</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UTypeDocumentoNCreditoAfectada.pas"/>
+        <DCCReference Include="mFinanzas\UdmDocumentoNCreditoAfectada.pas">
+            <Form>dmDocumentoNCreditoAfectada</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UTypeDocumentoNCargoSAfectar.pas"/>
+        <DCCReference Include="mFinanzas\UdmDocumentoNCargoSAfectar.pas">
+            <Form>dmDocumentoNCargoSAfectar</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UTypeDocumentoNCargoAfectada.pas"/>
+        <DCCReference Include="mFinanzas\UdmDocumentoNCargoAfectada.pas">
+            <Form>dmDocumentoNCargoAfectada</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UTypeEstadoDeCuentas.pas"/>
+        <DCCReference Include="mFinanzas\UdmEstadoDeCuentas.pas">
+            <Form>dmEstadoDeCuentas</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\capturar_cxc_mensajes.pas">
+            <Form>frmCapturar_cxc_mensajes</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\capturar_pagos_formas_de_pago.pas">
+            <Form>frmCapturar_Pagos_formas_de_pago</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmDocumentoPagos.pas">
+            <Form>frmDocumentoPagos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmDetalleDeLaVenta.pas">
+            <Form>frmDetalleDeLaVenta</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UTypeDetalleDeLaVenta.pas"/>
+        <DCCReference Include="mFinanzas\UdmDetalleDeLaVenta.pas">
+            <Form>dmDetalleDeLaVenta</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmChequesR.pas">
+            <Form>frmChequesR</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mSalidas\UfrmInfo.pas">
+            <Form>frmInfo</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UTypeDocumentoPagos.pas"/>
+        <DCCReference Include="mFinanzas\UdmDocumentoPagos.pas">
+            <Form>dmDocumentoPagos</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmChequeDevuelto.pas">
+            <Form>frmChequeDevuelto</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmVencidos.pas">
+            <Form>frmVencidos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmSeleccionMoneda.pas">
+            <Form>frmSeleccionMoneda</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\PRN_CORTE_CAJAS_CtasXCobrar.pas">
+            <Form>frmPRN_CORTE_CAJA_CtasXCobrar</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\capturar_busqueda_pagos.pas">
+            <Form>frmCapturar_busqueda_pagos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\PRN_0007_Pagos.pas">
+            <Form>frmPRN_0007</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UTypeVencidos.pas"/>
+        <DCCReference Include="mFinanzas\UdmVencidos.pas">
+            <Form>dmVencidos</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="mSalidas\RPT_FICHA_DEPOSITO.pas">
+            <Form>frmRPT_FICHA_DEPOSITO</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mSalidas\RPT_RESUMEN_ALMACENES.pas">
+            <Form>frmRPT_RESUMEN_ALMACENES</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mSalidas\RPT_ENTRADAS_SALIDAS.pas">
+            <Form>frmRPT_ENTRADAS_SALIDAS</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\RPT_CORTE_CAJAS_CXC_CC_DET.pas">
+            <Form>frmRPT_CORTE_CAJAS_CXC_CC_DET</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\RPT_CORTE_CAJAS_CXC_CC.pas">
+            <Form>frmRPT_CORTE_CAJAS_CXC_CC</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\RPT_CORTE_CAJAS_CXC_DET.pas">
+            <Form>frmRPT_CORTE_CAJAS_CXC_DET</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\RPT_CORTE_CAJAS_CXC.pas">
+            <Form>frmRPT_CORTE_CAJAS_CXC</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmBusquedaMontosCXC.pas">
+            <Form>frmBusquedaMontos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\PRN_0015_NC_TXT.pas">
+            <Form>frmPRN_0015_TXT</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmSeleccionarFacturas.pas">
+            <Form>frmSeleccionarFacturas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmSeleccionarPedidos.pas">
+            <Form>frmSeleccionarPedidos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmSeleccionarCDescuento.pas">
+            <Form>frmSeleccionarCDescuento</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="UfrmAcceso.pas">
+            <Form>frmAcceso</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmElegirCFNCredito.pas">
+            <Form>frmCFNCredito</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\seleccionar_cuentas_por_cobrar.pas">
+            <Form>frmSeleccionar_cuentas_por_cobrar</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="autorizacion.pas">
+            <Form>frmAutorizacion</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\seleccionar_notas_de_credito.pas">
+            <Form>frmSeleccionar_notas_de_credito</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\ver_notas_de_credito_en_nc.pas">
+            <Form>frmVer_notas_de_credito_en_nc</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmAddPartNCredito.pas">
+            <Form>frmAddPartNCredito</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mSalidas\PRN_0003_FACTURAR.pas">
+            <Form>frmPRN_0003</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mSalidas\PRN_0003_FACTURAR_TXT.pas">
+            <Form>frmPRN_0003_TXT</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\URPT_SEGUIMIENTO_SEM_DET.pas">
+            <Form>RPT_SEGUIMIENTO_SEM_DET</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\explorar_colectas_pagos.pas">
+            <Form>frmExplorar_colectas_pagos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\PRN_0010_Colectas_pagos.pas">
+            <Form>frmPRN_0010</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mSalidas\PRN_0006_Colectas.pas">
+            <Form>frmPRN_0006</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\URPT_SEGUIMIENTO_SEM_DET_PAGOS.pas">
+            <Form>RPT_SEGUIMIENTO_SEM_DET_PAGOS</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\URPT_PROYECCION_SEM_DET_PAGOS.pas">
+            <Form>RPT_PROYECCION_SEM_DET_PAGOS</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\seleccionar_cuentas_x_pagar.pas">
+            <Form>frmSeleccionar_cuentas_x_pagar</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\seleccionar_descuentos.pas">
+            <Form>frmSeleccionar_descuentos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\PRN_0021_NCARGO_TXT.pas">
+            <Form>frmPRN_0021_TXT</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmSeleccionarCXC.pas">
+            <Form>frmSeleccionarCXC</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmSeleccionarCXP.pas">
+            <Form>frmSeleccionarCXP</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmSeleccionarCliente_.pas">
+            <Form>frmSeleccionarCliente_</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmSeleccionarProveedor_.pas">
+            <Form>frmSeleccionarProveedor_</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UTypeChequesGirados.pas"/>
+        <DCCReference Include="mFinanzas\UdmChequesGirados.pas">
+            <Form>dmChequesGirados</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\PRN_0018_CHEQUES_TXT.pas">
+            <Form>frmPRN_0018_TXT</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\capturar_cheques_girados_movimientos.pas">
+            <Form>frmCapturar_ChequesGiradosMovimientos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\PRN_CORTE_CHEQUES_GIRADOS.pas">
+            <Form>frmPRN_CORTE_CHEQUES_GIRADOS</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmPolizasEDetalle.pas">
+            <Form>frmPolizasEDetalle</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\RPT_CORTE_CHEQUES_GIRADOS.pas">
+            <Form>frmRPT_CORTE_CHEQUES_GIRADOS</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmAddPoliza.pas">
+            <Form>frmAddPoliza</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\UfrmAddPrepoliza.pas">
+            <Form>frmAddPrepoliza</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\explorar_chequeras.pas">
+            <Form>frmExplorar_chequeras</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\seleccionar_banco_gral.pas">
+            <Form>frmSeleccionar_bancos_gral</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\capturar_busqueda_cheques.pas">
+            <Form>frmCapturar_busqueda_cheques</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\PRN_0011_Cheques.pas">
+            <Form>frmPRN_0011</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmSeleccionarCliente.pas">
+            <Form>frmSeleccionarCliente</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmSeleccionarExtension.pas">
+            <Form>frmSeleccionarExtension</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\capturar_mov_sin_clasificar_movimientos.pas">
+            <Form>frmCapturar_movSinClasificarMovimientos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\PRN_0020_MOV_SC.pas">
+            <Form>frmPRN_0020</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mSalidas\PRN_0029_MI.pas">
+            <Form>frmPRN_0029</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mcatalogos\UfrmSeleccionarProveedor.pas">
+            <Form>frmSeleccionarProveedor</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mInventario\capturar_tipos_de_entrada.pas">
+            <Form>frmCapturar_tipos_de_entrada</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mInventario\capturar_tipos_de_salida.pas">
+            <Form>frmCapturar_tipos_de_salida</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mInventario\explorar_movimientos_de_inventario.pas">
+            <Form>frmExplorar_movimientos_de_inventario</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mInventario\explorar_tipos_de_entrada.pas">
+            <Form>frmExplorar_tipos_de_entrada</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mInventario\explorar_tipos_de_salida.pas">
+            <Form>frmExplorar_tipos_de_salida</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mInventario\FR_0001.pas">
+            <Form>frmFR_0001</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mInventario\UdmInventarios.pas">
+            <Form>dmInventarios</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="mInventario\UdmMovDeInvDet.pas">
+            <Form>dmMovimientosDeInventarioDet</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="mInventario\UdmMovimientosDeInventario.pas">
+            <Form>dmMovimientosDeInventario</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="mInventario\UfrmInsuficienciasMI.pas">
+            <Form>frmInsuficienciasMI</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mInventario\UfrmInventarios.pas">
+            <Form>frmInventarios</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mInventario\UfrmKardex.pas">
+            <Form>frmKardex</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mInventario\UfrmMInventarioLoad.pas">
+            <Form>frmMInventarioLoad</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mInventario\UfrmMovimientosDeInventario.pas">
+            <Form>frmMovimientosDeInventario</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mInventario\UfrmSKU.pas">
+            <Form>frmSKU</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mInventario\UfrmSKUConfirmar.pas">
+            <Form>frmSKUConfirmar</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mInventario\UfrmSKUConfirmarCompleto.pas">
+            <Form>frmSKUConfirmarCompleto</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mInventario\UfrmSKUGenerar.pas">
+            <Form>frmSKUGenerar</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mInventario\UTypeInventarios.pas"/>
+        <DCCReference Include="mInventario\UTypeMovDeInvDet.pas"/>
+        <DCCReference Include="mInventario\UTypeMovimientosDeInventario.pas"/>
+        <DCCReference Include="Ruta.pas">
+            <Form>frRuta</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="UfrmColaboradores.pas">
+            <Form>frmColaboradores</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uMensajesError.pas"/>
+        <DCCReference Include="mFinanzas\explorar_anticipos.pas">
+            <Form>frmExplorar_anticipos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\capturar_notas_de_credito.pas">
+            <Form>frmCapturar_notas_de_credito</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\URPT_ANTICIPOS.pas">
+            <Form>RPT_ANTICIPOS</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="mFinanzas\URPT_ANTICIPOS_PROVEEDORES.pas">
+            <Form>RPT_ANTICIPOS_PROVEEDORES</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="IBModulo.pas">
+            <Form>dmIBModulo</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
@@ -107,6 +1453,10 @@
                 <Source>
                     <Source Name="MainSource">Mkitshoes.dpr</Source>
                 </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k220.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp220.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="1">
                 <DeployFile LocalName="Win32\Debug\Mkitshoes.exe" Configuration="Debug" Class="ProjectOutput">
@@ -491,18 +1841,19 @@
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
-                <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="iOSSimulator" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME).app"/>
-                <ProjectRoot Platform="iOSSimulator" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>
             </Deployment>
             <Platforms>
                 <Platform value="Win32">True</Platform>
                 <Platform value="Win64">False</Platform>
             </Platforms>
+            <ModelSupport>False</ModelSupport>
         </BorlandProject>
         <ProjectFileVersion>12</ProjectFileVersion>
     </ProjectExtensions>
